@@ -16,5 +16,10 @@ namespace Minecraft_Shopping_Rebirth
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

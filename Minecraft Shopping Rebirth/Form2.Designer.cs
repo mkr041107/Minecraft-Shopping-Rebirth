@@ -30,10 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.btnMainGame = new System.Windows.Forms.Button();
-            this.pbGoldOre = new System.Windows.Forms.PictureBox();
+            this.pbDeepSlateUpgrade = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGoldOre)).BeginInit();
+            this.pbWoodenPickaxeUpgrade = new System.Windows.Forms.PictureBox();
+            this.pbStonePickaxeUpgrade = new System.Windows.Forms.PictureBox();
+            this.pbIronPickaxeUpgrade = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pbGoldPickaxeUpgrade = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pbDiamondPickaxeUpgrade = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeepSlateUpgrade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWoodenPickaxeUpgrade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStonePickaxeUpgrade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIronPickaxeUpgrade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGoldPickaxeUpgrade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDiamondPickaxeUpgrade)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMainGame
@@ -45,15 +65,15 @@
             this.btnMainGame.Text = "Main Game";
             this.btnMainGame.UseVisualStyleBackColor = true;
             // 
-            // pbGoldOre
+            // pbDeepSlateUpgrade
             // 
-            this.pbGoldOre.Image = ((System.Drawing.Image)(resources.GetObject("pbGoldOre.Image")));
-            this.pbGoldOre.Location = new System.Drawing.Point(12, 24);
-            this.pbGoldOre.Name = "pbGoldOre";
-            this.pbGoldOre.Size = new System.Drawing.Size(100, 50);
-            this.pbGoldOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbGoldOre.TabIndex = 6;
-            this.pbGoldOre.TabStop = false;
+            this.pbDeepSlateUpgrade.Image = ((System.Drawing.Image)(resources.GetObject("pbDeepSlateUpgrade.Image")));
+            this.pbDeepSlateUpgrade.Location = new System.Drawing.Point(38, 24);
+            this.pbDeepSlateUpgrade.Name = "pbDeepSlateUpgrade";
+            this.pbDeepSlateUpgrade.Size = new System.Drawing.Size(49, 50);
+            this.pbDeepSlateUpgrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDeepSlateUpgrade.TabIndex = 6;
+            this.pbDeepSlateUpgrade.TabStop = false;
             // 
             // label1
             // 
@@ -73,18 +93,184 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Cost: 100 Emeralds";
             // 
+            // pbWoodenPickaxeUpgrade
+            // 
+            this.pbWoodenPickaxeUpgrade.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbWoodenPickaxeUpgrade.Image = ((System.Drawing.Image)(resources.GetObject("pbWoodenPickaxeUpgrade.Image")));
+            this.pbWoodenPickaxeUpgrade.Location = new System.Drawing.Point(190, 24);
+            this.pbWoodenPickaxeUpgrade.Name = "pbWoodenPickaxeUpgrade";
+            this.pbWoodenPickaxeUpgrade.Size = new System.Drawing.Size(49, 50);
+            this.pbWoodenPickaxeUpgrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbWoodenPickaxeUpgrade.TabIndex = 9;
+            this.pbWoodenPickaxeUpgrade.TabStop = false;
+            // 
+            // pbStonePickaxeUpgrade
+            // 
+            this.pbStonePickaxeUpgrade.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbStonePickaxeUpgrade.Image = ((System.Drawing.Image)(resources.GetObject("pbStonePickaxeUpgrade.Image")));
+            this.pbStonePickaxeUpgrade.Location = new System.Drawing.Point(311, 24);
+            this.pbStonePickaxeUpgrade.Name = "pbStonePickaxeUpgrade";
+            this.pbStonePickaxeUpgrade.Size = new System.Drawing.Size(49, 50);
+            this.pbStonePickaxeUpgrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbStonePickaxeUpgrade.TabIndex = 10;
+            this.pbStonePickaxeUpgrade.TabStop = false;
+            // 
+            // pbIronPickaxeUpgrade
+            // 
+            this.pbIronPickaxeUpgrade.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbIronPickaxeUpgrade.Image = ((System.Drawing.Image)(resources.GetObject("pbIronPickaxeUpgrade.Image")));
+            this.pbIronPickaxeUpgrade.Location = new System.Drawing.Point(434, 24);
+            this.pbIronPickaxeUpgrade.Name = "pbIronPickaxeUpgrade";
+            this.pbIronPickaxeUpgrade.Size = new System.Drawing.Size(49, 50);
+            this.pbIronPickaxeUpgrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbIronPickaxeUpgrade.TabIndex = 11;
+            this.pbIronPickaxeUpgrade.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(160, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Cost: 5 Wood";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(149, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Wooden Pickaxe Upgrade";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(290, 108);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Cost: 5 Stone";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(288, 86);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Stone Pickaxe Upgrade";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(412, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Cost: 5 Iron";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(410, 86);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Iron Pickaxe Upgrade";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(530, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Cost: 5 Gold";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(528, 86);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(114, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Gold Pickaxe Upgrade";
+            // 
+            // pbGoldPickaxeUpgrade
+            // 
+            this.pbGoldPickaxeUpgrade.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbGoldPickaxeUpgrade.Image = ((System.Drawing.Image)(resources.GetObject("pbGoldPickaxeUpgrade.Image")));
+            this.pbGoldPickaxeUpgrade.Location = new System.Drawing.Point(552, 24);
+            this.pbGoldPickaxeUpgrade.Name = "pbGoldPickaxeUpgrade";
+            this.pbGoldPickaxeUpgrade.Size = new System.Drawing.Size(49, 50);
+            this.pbGoldPickaxeUpgrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbGoldPickaxeUpgrade.TabIndex = 18;
+            this.pbGoldPickaxeUpgrade.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(654, 108);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Cost: 5 Diamonds";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(652, 86);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Diamond Pickaxe Upgrade";
+            // 
+            // pbDiamondPickaxeUpgrade
+            // 
+            this.pbDiamondPickaxeUpgrade.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbDiamondPickaxeUpgrade.Image = ((System.Drawing.Image)(resources.GetObject("pbDiamondPickaxeUpgrade.Image")));
+            this.pbDiamondPickaxeUpgrade.Location = new System.Drawing.Point(676, 24);
+            this.pbDiamondPickaxeUpgrade.Name = "pbDiamondPickaxeUpgrade";
+            this.pbDiamondPickaxeUpgrade.Size = new System.Drawing.Size(49, 50);
+            this.pbDiamondPickaxeUpgrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDiamondPickaxeUpgrade.TabIndex = 21;
+            this.pbDiamondPickaxeUpgrade.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.pbDiamondPickaxeUpgrade);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.pbGoldPickaxeUpgrade);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pbIronPickaxeUpgrade);
+            this.Controls.Add(this.pbStonePickaxeUpgrade);
+            this.Controls.Add(this.pbWoodenPickaxeUpgrade);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbGoldOre);
+            this.Controls.Add(this.pbDeepSlateUpgrade);
             this.Controls.Add(this.btnMainGame);
             this.Name = "Form2";
             this.Text = "Upgrades";
-            ((System.ComponentModel.ISupportInitialize)(this.pbGoldOre)).EndInit();
+            this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbDeepSlateUpgrade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWoodenPickaxeUpgrade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStonePickaxeUpgrade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIronPickaxeUpgrade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGoldPickaxeUpgrade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDiamondPickaxeUpgrade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,8 +279,23 @@
         #endregion
 
         private System.Windows.Forms.Button btnMainGame;
-        private System.Windows.Forms.PictureBox pbGoldOre;
+        private System.Windows.Forms.PictureBox pbDeepSlateUpgrade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbWoodenPickaxeUpgrade;
+        private System.Windows.Forms.PictureBox pbStonePickaxeUpgrade;
+        private System.Windows.Forms.PictureBox pbIronPickaxeUpgrade;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pbGoldPickaxeUpgrade;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pbDiamondPickaxeUpgrade;
     }
 }

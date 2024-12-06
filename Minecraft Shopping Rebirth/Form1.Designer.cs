@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pbWood = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
@@ -53,6 +54,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lblOakTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.tmrMove = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbWood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStone)).BeginInit();
@@ -66,9 +68,9 @@
             // pbWood
             // 
             this.pbWood.Image = ((System.Drawing.Image)(resources.GetObject("pbWood.Image")));
-            this.pbWood.Location = new System.Drawing.Point(12, 66);
+            this.pbWood.Location = new System.Drawing.Point(34, 66);
             this.pbWood.Name = "pbWood";
-            this.pbWood.Size = new System.Drawing.Size(100, 50);
+            this.pbWood.Size = new System.Drawing.Size(44, 50);
             this.pbWood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWood.TabIndex = 0;
             this.pbWood.TabStop = false;
@@ -87,9 +89,9 @@
             // pbStone
             // 
             this.pbStone.Image = ((System.Drawing.Image)(resources.GetObject("pbStone.Image")));
-            this.pbStone.Location = new System.Drawing.Point(144, 66);
+            this.pbStone.Location = new System.Drawing.Point(169, 66);
             this.pbStone.Name = "pbStone";
-            this.pbStone.Size = new System.Drawing.Size(100, 50);
+            this.pbStone.Size = new System.Drawing.Size(45, 50);
             this.pbStone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbStone.TabIndex = 2;
             this.pbStone.TabStop = false;
@@ -97,9 +99,9 @@
             // pbIronOre
             // 
             this.pbIronOre.Image = ((System.Drawing.Image)(resources.GetObject("pbIronOre.Image")));
-            this.pbIronOre.Location = new System.Drawing.Point(383, 66);
+            this.pbIronOre.Location = new System.Drawing.Point(409, 66);
             this.pbIronOre.Name = "pbIronOre";
-            this.pbIronOre.Size = new System.Drawing.Size(100, 50);
+            this.pbIronOre.Size = new System.Drawing.Size(48, 50);
             this.pbIronOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbIronOre.TabIndex = 3;
             this.pbIronOre.TabStop = false;
@@ -107,9 +109,9 @@
             // pbCopperOre
             // 
             this.pbCopperOre.Image = ((System.Drawing.Image)(resources.GetObject("pbCopperOre.Image")));
-            this.pbCopperOre.Location = new System.Drawing.Point(264, 66);
+            this.pbCopperOre.Location = new System.Drawing.Point(282, 66);
             this.pbCopperOre.Name = "pbCopperOre";
-            this.pbCopperOre.Size = new System.Drawing.Size(100, 50);
+            this.pbCopperOre.Size = new System.Drawing.Size(49, 50);
             this.pbCopperOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCopperOre.TabIndex = 4;
             this.pbCopperOre.TabStop = false;
@@ -117,9 +119,9 @@
             // pbGoldOre
             // 
             this.pbGoldOre.Image = ((System.Drawing.Image)(resources.GetObject("pbGoldOre.Image")));
-            this.pbGoldOre.Location = new System.Drawing.Point(509, 66);
+            this.pbGoldOre.Location = new System.Drawing.Point(525, 66);
             this.pbGoldOre.Name = "pbGoldOre";
-            this.pbGoldOre.Size = new System.Drawing.Size(100, 50);
+            this.pbGoldOre.Size = new System.Drawing.Size(50, 50);
             this.pbGoldOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbGoldOre.TabIndex = 5;
             this.pbGoldOre.TabStop = false;
@@ -127,9 +129,9 @@
             // pbDiamondOre
             // 
             this.pbDiamondOre.Image = ((System.Drawing.Image)(resources.GetObject("pbDiamondOre.Image")));
-            this.pbDiamondOre.Location = new System.Drawing.Point(639, 66);
+            this.pbDiamondOre.Location = new System.Drawing.Point(656, 66);
             this.pbDiamondOre.Name = "pbDiamondOre";
-            this.pbDiamondOre.Size = new System.Drawing.Size(100, 50);
+            this.pbDiamondOre.Size = new System.Drawing.Size(50, 50);
             this.pbDiamondOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDiamondOre.TabIndex = 6;
             this.pbDiamondOre.TabStop = false;
@@ -137,9 +139,9 @@
             // pbEmeraldOre
             // 
             this.pbEmeraldOre.Image = ((System.Drawing.Image)(resources.GetObject("pbEmeraldOre.Image")));
-            this.pbEmeraldOre.Location = new System.Drawing.Point(773, 66);
+            this.pbEmeraldOre.Location = new System.Drawing.Point(794, 66);
             this.pbEmeraldOre.Name = "pbEmeraldOre";
-            this.pbEmeraldOre.Size = new System.Drawing.Size(100, 50);
+            this.pbEmeraldOre.Size = new System.Drawing.Size(50, 50);
             this.pbEmeraldOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbEmeraldOre.TabIndex = 7;
             this.pbEmeraldOre.TabStop = false;
@@ -283,11 +285,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 12);
+            this.label4.Location = new System.Drawing.Point(41, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 22;
             this.label4.Text = "Oak";
+            // 
+            // tmrMove
+            // 
+            this.tmrMove.Enabled = true;
+            this.tmrMove.Tick += new System.EventHandler(this.tmrMove_Tick);
             // 
             // Form1
             // 
@@ -318,9 +325,12 @@
             this.Controls.Add(this.pbStone);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pbWood);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Main Game";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pbWood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStone)).EndInit();
@@ -360,6 +370,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblOakTotal;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Timer tmrMove;
     }
 }
 
