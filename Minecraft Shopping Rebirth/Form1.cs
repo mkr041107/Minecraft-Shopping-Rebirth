@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,8 @@ namespace Minecraft_Shopping_Rebirth
         bool right = false;
         bool down = false;
         int wood = 0;
+        int stone = 0;
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -30,11 +33,17 @@ namespace Minecraft_Shopping_Rebirth
         private void btnUpgrades_Click(object sender, EventArgs e)
         {
 
+            SharedVars.wood = wood;
+            Form2 Upgrades = new Form2();
+            this.Hide();
+            Upgrades.ShowDialog();
+            
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.DoubleBuffered = true; // Enable double buffering
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -61,19 +70,19 @@ namespace Minecraft_Shopping_Rebirth
         {
             if (up == true)
             {
-                Player.Top -= 10;
+                Player.Top -= 2;
             }
             if (down == true)
             {
-                Player.Top += 10;
+                Player.Top += 2;
             }
             if (left == true)
             {
-                Player.Left -= 10;
+                Player.Left -= 2;
             }
             if (right == true)
             {
-                Player.Left += 10;
+                Player.Left += 2;
             }
             if (Player.Bounds.IntersectsWith(pbWood.Bounds))
             {
@@ -81,6 +90,19 @@ namespace Minecraft_Shopping_Rebirth
                 lblOakTotal.Text = "Total: " + wood;
                 Player.Location = new Point(12, 258);
             }
+            if (SharedVars.woodenPickaxeUnlock == true)
+            {
+                lblStone.Visible = true;
+                lblTotalStone.Visible = true;
+                pbStone.Visible = true;
+                if (Player.Bounds.IntersectsWith(pbStone.Bounds))
+                {
+                    stone += 1;
+                    lblTotalStone.Text = "Total: " + stone;
+                    Player.Location = new Point(12, 258);
+                }
+            }
+            
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -101,6 +123,11 @@ namespace Minecraft_Shopping_Rebirth
             {
                 right = false;
             }
+        }
+
+        private void pbWood_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -128,6 +128,7 @@
             this.pbWoodChopper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWoodChopper.TabIndex = 12;
             this.pbWoodChopper.TabStop = false;
+            this.pbWoodChopper.Click += new System.EventHandler(this.pbWoodChopper_Click);
             // 
             // pbStoneMine
             // 

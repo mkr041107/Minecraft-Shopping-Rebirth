@@ -36,8 +36,8 @@
             this.pbWoodenPickaxeUpgrade = new System.Windows.Forms.PictureBox();
             this.pbStonePickaxeUpgrade = new System.Windows.Forms.PictureBox();
             this.pbIronPickaxeUpgrade = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblWoodenPickaxeUpgradeCost = new System.Windows.Forms.Label();
+            this.lblWoodenPickaxeUpgrade = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.btnMainGame.TabIndex = 0;
             this.btnMainGame.Text = "Main Game";
             this.btnMainGame.UseVisualStyleBackColor = true;
+            this.btnMainGame.Click += new System.EventHandler(this.btnMainGame_Click);
             // 
             // pbDeepSlateUpgrade
             // 
@@ -103,6 +104,7 @@
             this.pbWoodenPickaxeUpgrade.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWoodenPickaxeUpgrade.TabIndex = 9;
             this.pbWoodenPickaxeUpgrade.TabStop = false;
+            this.pbWoodenPickaxeUpgrade.Click += new System.EventHandler(this.pbWoodenPickaxeUpgrade_Click);
             // 
             // pbStonePickaxeUpgrade
             // 
@@ -126,23 +128,23 @@
             this.pbIronPickaxeUpgrade.TabIndex = 11;
             this.pbIronPickaxeUpgrade.TabStop = false;
             // 
-            // label3
+            // lblWoodenPickaxeUpgradeCost
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Cost: 5 Wood";
+            this.lblWoodenPickaxeUpgradeCost.AutoSize = true;
+            this.lblWoodenPickaxeUpgradeCost.Location = new System.Drawing.Point(160, 108);
+            this.lblWoodenPickaxeUpgradeCost.Name = "lblWoodenPickaxeUpgradeCost";
+            this.lblWoodenPickaxeUpgradeCost.Size = new System.Drawing.Size(72, 13);
+            this.lblWoodenPickaxeUpgradeCost.TabIndex = 13;
+            this.lblWoodenPickaxeUpgradeCost.Text = "Cost: 5 Wood";
             // 
-            // label4
+            // lblWoodenPickaxeUpgrade
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(149, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Wooden Pickaxe Upgrade";
+            this.lblWoodenPickaxeUpgrade.AutoSize = true;
+            this.lblWoodenPickaxeUpgrade.Location = new System.Drawing.Point(149, 86);
+            this.lblWoodenPickaxeUpgrade.Name = "lblWoodenPickaxeUpgrade";
+            this.lblWoodenPickaxeUpgrade.Size = new System.Drawing.Size(133, 13);
+            this.lblWoodenPickaxeUpgrade.TabIndex = 12;
+            this.lblWoodenPickaxeUpgrade.Text = "Wooden Pickaxe Upgrade";
             // 
             // label5
             // 
@@ -253,8 +255,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblWoodenPickaxeUpgradeCost);
+            this.Controls.Add(this.lblWoodenPickaxeUpgrade);
             this.Controls.Add(this.pbIronPickaxeUpgrade);
             this.Controls.Add(this.pbStonePickaxeUpgrade);
             this.Controls.Add(this.pbWoodenPickaxeUpgrade);
@@ -285,8 +287,8 @@
         private System.Windows.Forms.PictureBox pbWoodenPickaxeUpgrade;
         private System.Windows.Forms.PictureBox pbStonePickaxeUpgrade;
         private System.Windows.Forms.PictureBox pbIronPickaxeUpgrade;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblWoodenPickaxeUpgradeCost;
+        private System.Windows.Forms.Label lblWoodenPickaxeUpgrade;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

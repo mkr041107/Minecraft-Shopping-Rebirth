@@ -16,5 +16,10 @@ namespace Minecraft_Shopping_Rebirth
         {
             InitializeComponent();
         }
+
+        private void pbWoodChopper_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

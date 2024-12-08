@@ -40,18 +40,18 @@
             this.pbEmeraldOre = new System.Windows.Forms.PictureBox();
             this.btnUpgrades = new System.Windows.Forms.Button();
             this.btnBuildings = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStone = new System.Windows.Forms.Label();
             this.lblTotalStone = new System.Windows.Forms.Label();
             this.lblCopperTotal = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCopper = new System.Windows.Forms.Label();
             this.lblIronTotal = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblIron = new System.Windows.Forms.Label();
             this.lblGoldTotal = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblGold = new System.Windows.Forms.Label();
+            this.lblDiamondTotal = new System.Windows.Forms.Label();
             this.lblDiamond = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblEmeraldTotal = new System.Windows.Forms.Label();
             this.lblEmerald = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.lblOakTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tmrMove = new System.Windows.Forms.Timer(this.components);
@@ -74,6 +74,7 @@
             this.pbWood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWood.TabIndex = 0;
             this.pbWood.TabStop = false;
+            this.pbWood.Click += new System.EventHandler(this.pbWood_Click);
             // 
             // Player
             // 
@@ -95,6 +96,7 @@
             this.pbStone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbStone.TabIndex = 2;
             this.pbStone.TabStop = false;
+            this.pbStone.Visible = false;
             // 
             // pbIronOre
             // 
@@ -105,6 +107,7 @@
             this.pbIronOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbIronOre.TabIndex = 3;
             this.pbIronOre.TabStop = false;
+            this.pbIronOre.Visible = false;
             // 
             // pbCopperOre
             // 
@@ -115,6 +118,7 @@
             this.pbCopperOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCopperOre.TabIndex = 4;
             this.pbCopperOre.TabStop = false;
+            this.pbCopperOre.Visible = false;
             // 
             // pbGoldOre
             // 
@@ -125,6 +129,7 @@
             this.pbGoldOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbGoldOre.TabIndex = 5;
             this.pbGoldOre.TabStop = false;
+            this.pbGoldOre.Visible = false;
             // 
             // pbDiamondOre
             // 
@@ -135,6 +140,7 @@
             this.pbDiamondOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDiamondOre.TabIndex = 6;
             this.pbDiamondOre.TabStop = false;
+            this.pbDiamondOre.Visible = false;
             // 
             // pbEmeraldOre
             // 
@@ -145,6 +151,7 @@
             this.pbEmeraldOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbEmeraldOre.TabIndex = 7;
             this.pbEmeraldOre.TabStop = false;
+            this.pbEmeraldOre.Visible = false;
             // 
             // btnUpgrades
             // 
@@ -165,14 +172,15 @@
             this.btnBuildings.Text = "Buildings";
             this.btnBuildings.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblStone
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Stone";
+            this.lblStone.AutoSize = true;
+            this.lblStone.Location = new System.Drawing.Point(177, 9);
+            this.lblStone.Name = "lblStone";
+            this.lblStone.Size = new System.Drawing.Size(35, 13);
+            this.lblStone.TabIndex = 10;
+            this.lblStone.Text = "Stone";
+            this.lblStone.Visible = false;
             // 
             // lblTotalStone
             // 
@@ -182,6 +190,7 @@
             this.lblTotalStone.Size = new System.Drawing.Size(37, 13);
             this.lblTotalStone.TabIndex = 11;
             this.lblTotalStone.Text = "Total: ";
+            this.lblTotalStone.Visible = false;
             // 
             // lblCopperTotal
             // 
@@ -191,15 +200,17 @@
             this.lblCopperTotal.Size = new System.Drawing.Size(37, 13);
             this.lblCopperTotal.TabIndex = 13;
             this.lblCopperTotal.Text = "Total: ";
+            this.lblCopperTotal.Visible = false;
             // 
-            // label3
+            // lblCopper
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Copper";
+            this.lblCopper.AutoSize = true;
+            this.lblCopper.Location = new System.Drawing.Point(294, 9);
+            this.lblCopper.Name = "lblCopper";
+            this.lblCopper.Size = new System.Drawing.Size(41, 13);
+            this.lblCopper.TabIndex = 12;
+            this.lblCopper.Text = "Copper";
+            this.lblCopper.Visible = false;
             // 
             // lblIronTotal
             // 
@@ -209,15 +220,17 @@
             this.lblIronTotal.Size = new System.Drawing.Size(37, 13);
             this.lblIronTotal.TabIndex = 15;
             this.lblIronTotal.Text = "Total: ";
+            this.lblIronTotal.Visible = false;
             // 
-            // label5
+            // lblIron
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(420, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Iron";
+            this.lblIron.AutoSize = true;
+            this.lblIron.Location = new System.Drawing.Point(420, 9);
+            this.lblIron.Name = "lblIron";
+            this.lblIron.Size = new System.Drawing.Size(25, 13);
+            this.lblIron.TabIndex = 14;
+            this.lblIron.Text = "Iron";
+            this.lblIron.Visible = false;
             // 
             // lblGoldTotal
             // 
@@ -227,51 +240,57 @@
             this.lblGoldTotal.Size = new System.Drawing.Size(37, 13);
             this.lblGoldTotal.TabIndex = 17;
             this.lblGoldTotal.Text = "Total: ";
+            this.lblGoldTotal.Visible = false;
             // 
-            // label7
+            // lblGold
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(538, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Gold";
+            this.lblGold.AutoSize = true;
+            this.lblGold.Location = new System.Drawing.Point(538, 12);
+            this.lblGold.Name = "lblGold";
+            this.lblGold.Size = new System.Drawing.Size(29, 13);
+            this.lblGold.TabIndex = 16;
+            this.lblGold.Text = "Gold";
+            this.lblGold.Visible = false;
+            // 
+            // lblDiamondTotal
+            // 
+            this.lblDiamondTotal.AutoSize = true;
+            this.lblDiamondTotal.Location = new System.Drawing.Point(669, 38);
+            this.lblDiamondTotal.Name = "lblDiamondTotal";
+            this.lblDiamondTotal.Size = new System.Drawing.Size(37, 13);
+            this.lblDiamondTotal.TabIndex = 19;
+            this.lblDiamondTotal.Text = "Total: ";
+            this.lblDiamondTotal.Visible = false;
             // 
             // lblDiamond
             // 
             this.lblDiamond.AutoSize = true;
-            this.lblDiamond.Location = new System.Drawing.Point(669, 38);
+            this.lblDiamond.Location = new System.Drawing.Point(669, 12);
             this.lblDiamond.Name = "lblDiamond";
-            this.lblDiamond.Size = new System.Drawing.Size(37, 13);
-            this.lblDiamond.TabIndex = 19;
-            this.lblDiamond.Text = "Total: ";
+            this.lblDiamond.Size = new System.Drawing.Size(49, 13);
+            this.lblDiamond.TabIndex = 18;
+            this.lblDiamond.Text = "Diamond";
+            this.lblDiamond.Visible = false;
             // 
-            // label9
+            // lblEmeraldTotal
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(669, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Diamond";
+            this.lblEmeraldTotal.AutoSize = true;
+            this.lblEmeraldTotal.Location = new System.Drawing.Point(807, 35);
+            this.lblEmeraldTotal.Name = "lblEmeraldTotal";
+            this.lblEmeraldTotal.Size = new System.Drawing.Size(37, 13);
+            this.lblEmeraldTotal.TabIndex = 21;
+            this.lblEmeraldTotal.Text = "Total: ";
+            this.lblEmeraldTotal.Visible = false;
             // 
             // lblEmerald
             // 
             this.lblEmerald.AutoSize = true;
-            this.lblEmerald.Location = new System.Drawing.Point(807, 35);
+            this.lblEmerald.Location = new System.Drawing.Point(799, 9);
             this.lblEmerald.Name = "lblEmerald";
-            this.lblEmerald.Size = new System.Drawing.Size(37, 13);
-            this.lblEmerald.TabIndex = 21;
-            this.lblEmerald.Text = "Total: ";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(799, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 13);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Emerald";
+            this.lblEmerald.Size = new System.Drawing.Size(45, 13);
+            this.lblEmerald.TabIndex = 20;
+            this.lblEmerald.Text = "Emerald";
+            this.lblEmerald.Visible = false;
             // 
             // lblOakTotal
             // 
@@ -294,6 +313,7 @@
             // tmrMove
             // 
             this.tmrMove.Enabled = true;
+            this.tmrMove.Interval = 16;
             this.tmrMove.Tick += new System.EventHandler(this.tmrMove_Tick);
             // 
             // Form1
@@ -303,18 +323,18 @@
             this.ClientSize = new System.Drawing.Size(1283, 483);
             this.Controls.Add(this.lblOakTotal);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblEmeraldTotal);
             this.Controls.Add(this.lblEmerald);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblDiamondTotal);
             this.Controls.Add(this.lblDiamond);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.lblGoldTotal);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblGold);
             this.Controls.Add(this.lblIronTotal);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblIron);
             this.Controls.Add(this.lblCopperTotal);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblCopper);
             this.Controls.Add(this.lblTotalStone);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblStone);
             this.Controls.Add(this.btnBuildings);
             this.Controls.Add(this.btnUpgrades);
             this.Controls.Add(this.pbEmeraldOre);
@@ -356,18 +376,18 @@
         private System.Windows.Forms.PictureBox pbEmeraldOre;
         private System.Windows.Forms.Button btnUpgrades;
         private System.Windows.Forms.Button btnBuildings;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStone;
         private System.Windows.Forms.Label lblTotalStone;
         private System.Windows.Forms.Label lblCopperTotal;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCopper;
         private System.Windows.Forms.Label lblIronTotal;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblIron;
         private System.Windows.Forms.Label lblGoldTotal;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblGold;
+        private System.Windows.Forms.Label lblDiamondTotal;
         private System.Windows.Forms.Label lblDiamond;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblEmeraldTotal;
         private System.Windows.Forms.Label lblEmerald;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblOakTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer tmrMove;

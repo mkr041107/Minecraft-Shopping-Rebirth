@@ -16,10 +16,29 @@ namespace Minecraft_Shopping_Rebirth
         {
             InitializeComponent();
         }
-
+        int wood = SharedVars.wood;
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbWoodenPickaxeUpgrade_Click(object sender, EventArgs e)
+        {
+            wood -= 5;
+            SharedVars.woodenPickaxeUnlock = true;
+            pbWoodenPickaxeUpgrade.Enabled = false;
+            pbWoodenPickaxeUpgrade.Visible = false;
+            lblWoodenPickaxeUpgrade.Visible = false;
+            lblWoodenPickaxeUpgradeCost.Visible = false;
+        }
+
+        private void btnMainGame_Click(object sender, EventArgs e)
+        {
+            Form1 Main = new Form1();
+            this.Hide();
+            Main.ShowDialog();
+
+            this.Close();
         }
     }
 }
