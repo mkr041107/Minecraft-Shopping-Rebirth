@@ -34,6 +34,7 @@ namespace Minecraft_Shopping_Rebirth
         {
 
             SharedVars.wood = wood;
+            SharedVars.stone = stone;
             Form2 Upgrades = new Form2();
             this.Hide();
             Upgrades.ShowDialog();
@@ -43,7 +44,7 @@ namespace Minecraft_Shopping_Rebirth
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.DoubleBuffered = true; // Enable double buffering
+            this.DoubleBuffered = true;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -102,7 +103,19 @@ namespace Minecraft_Shopping_Rebirth
                     Player.Location = new Point(12, 258);
                 }
             }
-            
+            if (SharedVars.stonePickaxeUnlock == true)
+            {
+                lblStone.Visible = true;
+                lblTotalStone.Visible = true;
+                pbStone.Visible = true;
+                if (Player.Bounds.IntersectsWith(pbStone.Bounds))
+                {
+                    stone += 1;
+                    lblTotalStone.Text = "Total: " + stone;
+                    Player.Location = new Point(12, 258);
+                }
+            }
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)

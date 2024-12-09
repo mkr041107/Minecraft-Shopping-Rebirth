@@ -17,19 +17,40 @@ namespace Minecraft_Shopping_Rebirth
             InitializeComponent();
         }
         int wood = SharedVars.wood;
+        int stone = SharedVars.stone;
+        static bool initialFormLoad = false;
         private void Form2_Load(object sender, EventArgs e)
         {
+            if (initialFormLoad == false||SharedVars.woodenPickaxeUnlock == false)
+            {
 
+                pbWoodenPickaxeUpgrade.Visible = true;
+                lblWoodenPickaxeUpgrade.Visible = true;
+                lblWoodenPickaxeUpgradeCost.Visible = true;
+                initialFormLoad = true;
+
+            }
+            if (initialFormLoad == false || SharedVars.stonePickaxeUnlock == false)
+            {
+                pbStonePickaxeUpgrade.Visible = true;
+                lblStonePickaxeUpgrade.Visible = true;
+                lblStonePickaxeCost.Visible = true;
+                initialFormLoad = true;
+            }
+        
         }
 
         private void pbWoodenPickaxeUpgrade_Click(object sender, EventArgs e)
         {
-            wood -= 5;
-            SharedVars.woodenPickaxeUnlock = true;
-            pbWoodenPickaxeUpgrade.Enabled = false;
-            pbWoodenPickaxeUpgrade.Visible = false;
-            lblWoodenPickaxeUpgrade.Visible = false;
-            lblWoodenPickaxeUpgradeCost.Visible = false;
+            if (wood >= 5)
+            {
+                wood -= 5;
+                SharedVars.woodenPickaxeUnlock = true;
+                pbWoodenPickaxeUpgrade.Enabled = false;
+                pbWoodenPickaxeUpgrade.Visible = false;
+                lblWoodenPickaxeUpgrade.Visible = false;
+                lblWoodenPickaxeUpgradeCost.Visible = false;
+            }
         }
 
         private void btnMainGame_Click(object sender, EventArgs e)
@@ -39,6 +60,17 @@ namespace Minecraft_Shopping_Rebirth
             Main.ShowDialog();
 
             this.Close();
+        }
+
+        private void pbStonePickaxeUpgrade_Click(object sender, EventArgs e)
+        {
+            if (stone >= 5) { 
+            stone -= 5;
+            SharedVars.stonePickaxeUnlock = true;
+            pbStonePickaxeUpgrade.Enabled = false;
+            pbStonePickaxeUpgrade.Visible = false;
+            lblStonePickaxeUpgrade.Visible = false;
+            lblStonePickaxeCost.Visible = false; }
         }
     }
 }
