@@ -40,13 +40,13 @@
             this.lblWoodenPickaxeUpgrade = new System.Windows.Forms.Label();
             this.lblStonePickaxeCost = new System.Windows.Forms.Label();
             this.lblStonePickaxeUpgrade = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblIronPickaxeCost = new System.Windows.Forms.Label();
+            this.lblIronPickaxeUpgrade = new System.Windows.Forms.Label();
+            this.lblGoldPickaxeCost = new System.Windows.Forms.Label();
+            this.lblGoldPickaxeUpgrade = new System.Windows.Forms.Label();
             this.pbGoldPickaxeUpgrade = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblDiamondPickaxeCost = new System.Windows.Forms.Label();
+            this.lblDiamondPickaxeUpgrade = new System.Windows.Forms.Label();
             this.pbDiamondPickaxeUpgrade = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeepSlateUpgrade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWoodenPickaxeUpgrade)).BeginInit();
@@ -131,6 +131,7 @@
             this.pbIronPickaxeUpgrade.TabIndex = 11;
             this.pbIronPickaxeUpgrade.TabStop = false;
             this.pbIronPickaxeUpgrade.Visible = false;
+            this.pbIronPickaxeUpgrade.Click += new System.EventHandler(this.pbIronPickaxeUpgrade_Click);
             // 
             // lblWoodenPickaxeUpgradeCost
             // 
@@ -172,45 +173,45 @@
             this.lblStonePickaxeUpgrade.Text = "Stone Pickaxe Upgrade";
             this.lblStonePickaxeUpgrade.Visible = false;
             // 
-            // label7
+            // lblIronPickaxeCost
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(412, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Cost: 5 Iron";
-            this.label7.Visible = false;
+            this.lblIronPickaxeCost.AutoSize = true;
+            this.lblIronPickaxeCost.Location = new System.Drawing.Point(412, 108);
+            this.lblIronPickaxeCost.Name = "lblIronPickaxeCost";
+            this.lblIronPickaxeCost.Size = new System.Drawing.Size(61, 13);
+            this.lblIronPickaxeCost.TabIndex = 17;
+            this.lblIronPickaxeCost.Text = "Cost: 5 Iron";
+            this.lblIronPickaxeCost.Visible = false;
             // 
-            // label8
+            // lblIronPickaxeUpgrade
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(410, 86);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Iron Pickaxe Upgrade";
-            this.label8.Visible = false;
+            this.lblIronPickaxeUpgrade.AutoSize = true;
+            this.lblIronPickaxeUpgrade.Location = new System.Drawing.Point(410, 86);
+            this.lblIronPickaxeUpgrade.Name = "lblIronPickaxeUpgrade";
+            this.lblIronPickaxeUpgrade.Size = new System.Drawing.Size(110, 13);
+            this.lblIronPickaxeUpgrade.TabIndex = 16;
+            this.lblIronPickaxeUpgrade.Text = "Iron Pickaxe Upgrade";
+            this.lblIronPickaxeUpgrade.Visible = false;
             // 
-            // label9
+            // lblGoldPickaxeCost
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(530, 108);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Cost: 5 Gold";
-            this.label9.Visible = false;
+            this.lblGoldPickaxeCost.AutoSize = true;
+            this.lblGoldPickaxeCost.Location = new System.Drawing.Point(530, 108);
+            this.lblGoldPickaxeCost.Name = "lblGoldPickaxeCost";
+            this.lblGoldPickaxeCost.Size = new System.Drawing.Size(65, 13);
+            this.lblGoldPickaxeCost.TabIndex = 20;
+            this.lblGoldPickaxeCost.Text = "Cost: 5 Gold";
+            this.lblGoldPickaxeCost.Visible = false;
             // 
-            // label10
+            // lblGoldPickaxeUpgrade
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(528, 86);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Gold Pickaxe Upgrade";
-            this.label10.Visible = false;
+            this.lblGoldPickaxeUpgrade.AutoSize = true;
+            this.lblGoldPickaxeUpgrade.Location = new System.Drawing.Point(528, 86);
+            this.lblGoldPickaxeUpgrade.Name = "lblGoldPickaxeUpgrade";
+            this.lblGoldPickaxeUpgrade.Size = new System.Drawing.Size(114, 13);
+            this.lblGoldPickaxeUpgrade.TabIndex = 19;
+            this.lblGoldPickaxeUpgrade.Text = "Gold Pickaxe Upgrade";
+            this.lblGoldPickaxeUpgrade.Visible = false;
             // 
             // pbGoldPickaxeUpgrade
             // 
@@ -223,26 +224,27 @@
             this.pbGoldPickaxeUpgrade.TabIndex = 18;
             this.pbGoldPickaxeUpgrade.TabStop = false;
             this.pbGoldPickaxeUpgrade.Visible = false;
+            this.pbGoldPickaxeUpgrade.Click += new System.EventHandler(this.pbGoldPickaxeUpgrade_Click);
             // 
-            // label11
+            // lblDiamondPickaxeCost
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(654, 108);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Cost: 5 Diamonds";
-            this.label11.Visible = false;
+            this.lblDiamondPickaxeCost.AutoSize = true;
+            this.lblDiamondPickaxeCost.Location = new System.Drawing.Point(654, 108);
+            this.lblDiamondPickaxeCost.Name = "lblDiamondPickaxeCost";
+            this.lblDiamondPickaxeCost.Size = new System.Drawing.Size(90, 13);
+            this.lblDiamondPickaxeCost.TabIndex = 23;
+            this.lblDiamondPickaxeCost.Text = "Cost: 5 Diamonds";
+            this.lblDiamondPickaxeCost.Visible = false;
             // 
-            // label12
+            // lblDiamondPickaxeUpgrade
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(652, 86);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 13);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Diamond Pickaxe Upgrade";
-            this.label12.Visible = false;
+            this.lblDiamondPickaxeUpgrade.AutoSize = true;
+            this.lblDiamondPickaxeUpgrade.Location = new System.Drawing.Point(652, 86);
+            this.lblDiamondPickaxeUpgrade.Name = "lblDiamondPickaxeUpgrade";
+            this.lblDiamondPickaxeUpgrade.Size = new System.Drawing.Size(134, 13);
+            this.lblDiamondPickaxeUpgrade.TabIndex = 22;
+            this.lblDiamondPickaxeUpgrade.Text = "Diamond Pickaxe Upgrade";
+            this.lblDiamondPickaxeUpgrade.Visible = false;
             // 
             // pbDiamondPickaxeUpgrade
             // 
@@ -255,20 +257,21 @@
             this.pbDiamondPickaxeUpgrade.TabIndex = 21;
             this.pbDiamondPickaxeUpgrade.TabStop = false;
             this.pbDiamondPickaxeUpgrade.Visible = false;
+            this.pbDiamondPickaxeUpgrade.Click += new System.EventHandler(this.pbDiamondPickaxeUpgrade_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblDiamondPickaxeCost);
+            this.Controls.Add(this.lblDiamondPickaxeUpgrade);
             this.Controls.Add(this.pbDiamondPickaxeUpgrade);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblGoldPickaxeCost);
+            this.Controls.Add(this.lblGoldPickaxeUpgrade);
             this.Controls.Add(this.pbGoldPickaxeUpgrade);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblIronPickaxeCost);
+            this.Controls.Add(this.lblIronPickaxeUpgrade);
             this.Controls.Add(this.lblStonePickaxeCost);
             this.Controls.Add(this.lblStonePickaxeUpgrade);
             this.Controls.Add(this.lblWoodenPickaxeUpgradeCost);
@@ -307,13 +310,13 @@
         private System.Windows.Forms.Label lblWoodenPickaxeUpgrade;
         private System.Windows.Forms.Label lblStonePickaxeCost;
         private System.Windows.Forms.Label lblStonePickaxeUpgrade;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblIronPickaxeCost;
+        private System.Windows.Forms.Label lblIronPickaxeUpgrade;
+        private System.Windows.Forms.Label lblGoldPickaxeCost;
+        private System.Windows.Forms.Label lblGoldPickaxeUpgrade;
         private System.Windows.Forms.PictureBox pbGoldPickaxeUpgrade;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblDiamondPickaxeCost;
+        private System.Windows.Forms.Label lblDiamondPickaxeUpgrade;
         private System.Windows.Forms.PictureBox pbDiamondPickaxeUpgrade;
     }
 }

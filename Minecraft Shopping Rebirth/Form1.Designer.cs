@@ -34,7 +34,6 @@
             this.Player = new System.Windows.Forms.PictureBox();
             this.pbStone = new System.Windows.Forms.PictureBox();
             this.pbIronOre = new System.Windows.Forms.PictureBox();
-            this.pbCopperOre = new System.Windows.Forms.PictureBox();
             this.pbGoldOre = new System.Windows.Forms.PictureBox();
             this.pbDiamondOre = new System.Windows.Forms.PictureBox();
             this.pbEmeraldOre = new System.Windows.Forms.PictureBox();
@@ -42,8 +41,6 @@
             this.btnBuildings = new System.Windows.Forms.Button();
             this.lblStone = new System.Windows.Forms.Label();
             this.lblTotalStone = new System.Windows.Forms.Label();
-            this.lblCopperTotal = new System.Windows.Forms.Label();
-            this.lblCopper = new System.Windows.Forms.Label();
             this.lblIronTotal = new System.Windows.Forms.Label();
             this.lblIron = new System.Windows.Forms.Label();
             this.lblGoldTotal = new System.Windows.Forms.Label();
@@ -59,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIronOre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCopperOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGoldOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiamondOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmeraldOre)).BeginInit();
@@ -101,7 +97,7 @@
             // pbIronOre
             // 
             this.pbIronOre.Image = ((System.Drawing.Image)(resources.GetObject("pbIronOre.Image")));
-            this.pbIronOre.Location = new System.Drawing.Point(409, 66);
+            this.pbIronOre.Location = new System.Drawing.Point(288, 66);
             this.pbIronOre.Name = "pbIronOre";
             this.pbIronOre.Size = new System.Drawing.Size(48, 50);
             this.pbIronOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,21 +105,10 @@
             this.pbIronOre.TabStop = false;
             this.pbIronOre.Visible = false;
             // 
-            // pbCopperOre
-            // 
-            this.pbCopperOre.Image = ((System.Drawing.Image)(resources.GetObject("pbCopperOre.Image")));
-            this.pbCopperOre.Location = new System.Drawing.Point(282, 66);
-            this.pbCopperOre.Name = "pbCopperOre";
-            this.pbCopperOre.Size = new System.Drawing.Size(49, 50);
-            this.pbCopperOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCopperOre.TabIndex = 4;
-            this.pbCopperOre.TabStop = false;
-            this.pbCopperOre.Visible = false;
-            // 
             // pbGoldOre
             // 
             this.pbGoldOre.Image = ((System.Drawing.Image)(resources.GetObject("pbGoldOre.Image")));
-            this.pbGoldOre.Location = new System.Drawing.Point(525, 66);
+            this.pbGoldOre.Location = new System.Drawing.Point(404, 66);
             this.pbGoldOre.Name = "pbGoldOre";
             this.pbGoldOre.Size = new System.Drawing.Size(50, 50);
             this.pbGoldOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,7 +119,7 @@
             // pbDiamondOre
             // 
             this.pbDiamondOre.Image = ((System.Drawing.Image)(resources.GetObject("pbDiamondOre.Image")));
-            this.pbDiamondOre.Location = new System.Drawing.Point(656, 66);
+            this.pbDiamondOre.Location = new System.Drawing.Point(535, 66);
             this.pbDiamondOre.Name = "pbDiamondOre";
             this.pbDiamondOre.Size = new System.Drawing.Size(50, 50);
             this.pbDiamondOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -145,7 +130,7 @@
             // pbEmeraldOre
             // 
             this.pbEmeraldOre.Image = ((System.Drawing.Image)(resources.GetObject("pbEmeraldOre.Image")));
-            this.pbEmeraldOre.Location = new System.Drawing.Point(794, 66);
+            this.pbEmeraldOre.Location = new System.Drawing.Point(673, 66);
             this.pbEmeraldOre.Name = "pbEmeraldOre";
             this.pbEmeraldOre.Size = new System.Drawing.Size(50, 50);
             this.pbEmeraldOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,30 +177,10 @@
             this.lblTotalStone.Text = "Total: ";
             this.lblTotalStone.Visible = false;
             // 
-            // lblCopperTotal
-            // 
-            this.lblCopperTotal.AutoSize = true;
-            this.lblCopperTotal.Location = new System.Drawing.Point(294, 35);
-            this.lblCopperTotal.Name = "lblCopperTotal";
-            this.lblCopperTotal.Size = new System.Drawing.Size(37, 13);
-            this.lblCopperTotal.TabIndex = 13;
-            this.lblCopperTotal.Text = "Total: ";
-            this.lblCopperTotal.Visible = false;
-            // 
-            // lblCopper
-            // 
-            this.lblCopper.AutoSize = true;
-            this.lblCopper.Location = new System.Drawing.Point(294, 9);
-            this.lblCopper.Name = "lblCopper";
-            this.lblCopper.Size = new System.Drawing.Size(41, 13);
-            this.lblCopper.TabIndex = 12;
-            this.lblCopper.Text = "Copper";
-            this.lblCopper.Visible = false;
-            // 
             // lblIronTotal
             // 
             this.lblIronTotal.AutoSize = true;
-            this.lblIronTotal.Location = new System.Drawing.Point(420, 35);
+            this.lblIronTotal.Location = new System.Drawing.Point(299, 35);
             this.lblIronTotal.Name = "lblIronTotal";
             this.lblIronTotal.Size = new System.Drawing.Size(37, 13);
             this.lblIronTotal.TabIndex = 15;
@@ -225,7 +190,7 @@
             // lblIron
             // 
             this.lblIron.AutoSize = true;
-            this.lblIron.Location = new System.Drawing.Point(420, 9);
+            this.lblIron.Location = new System.Drawing.Point(299, 9);
             this.lblIron.Name = "lblIron";
             this.lblIron.Size = new System.Drawing.Size(25, 13);
             this.lblIron.TabIndex = 14;
@@ -235,7 +200,7 @@
             // lblGoldTotal
             // 
             this.lblGoldTotal.AutoSize = true;
-            this.lblGoldTotal.Location = new System.Drawing.Point(538, 38);
+            this.lblGoldTotal.Location = new System.Drawing.Point(417, 38);
             this.lblGoldTotal.Name = "lblGoldTotal";
             this.lblGoldTotal.Size = new System.Drawing.Size(37, 13);
             this.lblGoldTotal.TabIndex = 17;
@@ -245,7 +210,7 @@
             // lblGold
             // 
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(538, 12);
+            this.lblGold.Location = new System.Drawing.Point(417, 12);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(29, 13);
             this.lblGold.TabIndex = 16;
@@ -255,7 +220,7 @@
             // lblDiamondTotal
             // 
             this.lblDiamondTotal.AutoSize = true;
-            this.lblDiamondTotal.Location = new System.Drawing.Point(669, 38);
+            this.lblDiamondTotal.Location = new System.Drawing.Point(548, 38);
             this.lblDiamondTotal.Name = "lblDiamondTotal";
             this.lblDiamondTotal.Size = new System.Drawing.Size(37, 13);
             this.lblDiamondTotal.TabIndex = 19;
@@ -265,7 +230,7 @@
             // lblDiamond
             // 
             this.lblDiamond.AutoSize = true;
-            this.lblDiamond.Location = new System.Drawing.Point(669, 12);
+            this.lblDiamond.Location = new System.Drawing.Point(548, 12);
             this.lblDiamond.Name = "lblDiamond";
             this.lblDiamond.Size = new System.Drawing.Size(49, 13);
             this.lblDiamond.TabIndex = 18;
@@ -275,7 +240,7 @@
             // lblEmeraldTotal
             // 
             this.lblEmeraldTotal.AutoSize = true;
-            this.lblEmeraldTotal.Location = new System.Drawing.Point(807, 35);
+            this.lblEmeraldTotal.Location = new System.Drawing.Point(686, 35);
             this.lblEmeraldTotal.Name = "lblEmeraldTotal";
             this.lblEmeraldTotal.Size = new System.Drawing.Size(37, 13);
             this.lblEmeraldTotal.TabIndex = 21;
@@ -285,7 +250,7 @@
             // lblEmerald
             // 
             this.lblEmerald.AutoSize = true;
-            this.lblEmerald.Location = new System.Drawing.Point(799, 9);
+            this.lblEmerald.Location = new System.Drawing.Point(678, 9);
             this.lblEmerald.Name = "lblEmerald";
             this.lblEmerald.Size = new System.Drawing.Size(45, 13);
             this.lblEmerald.TabIndex = 20;
@@ -331,8 +296,6 @@
             this.Controls.Add(this.lblGold);
             this.Controls.Add(this.lblIronTotal);
             this.Controls.Add(this.lblIron);
-            this.Controls.Add(this.lblCopperTotal);
-            this.Controls.Add(this.lblCopper);
             this.Controls.Add(this.lblTotalStone);
             this.Controls.Add(this.lblStone);
             this.Controls.Add(this.btnBuildings);
@@ -340,7 +303,6 @@
             this.Controls.Add(this.pbEmeraldOre);
             this.Controls.Add(this.pbDiamondOre);
             this.Controls.Add(this.pbGoldOre);
-            this.Controls.Add(this.pbCopperOre);
             this.Controls.Add(this.pbIronOre);
             this.Controls.Add(this.pbStone);
             this.Controls.Add(this.Player);
@@ -355,7 +317,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIronOre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCopperOre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGoldOre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiamondOre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmeraldOre)).EndInit();
@@ -370,7 +331,6 @@
         private System.Windows.Forms.PictureBox Player;
         private System.Windows.Forms.PictureBox pbStone;
         private System.Windows.Forms.PictureBox pbIronOre;
-        private System.Windows.Forms.PictureBox pbCopperOre;
         private System.Windows.Forms.PictureBox pbGoldOre;
         private System.Windows.Forms.PictureBox pbDiamondOre;
         private System.Windows.Forms.PictureBox pbEmeraldOre;
@@ -378,8 +338,6 @@
         private System.Windows.Forms.Button btnBuildings;
         private System.Windows.Forms.Label lblStone;
         private System.Windows.Forms.Label lblTotalStone;
-        private System.Windows.Forms.Label lblCopperTotal;
-        private System.Windows.Forms.Label lblCopper;
         private System.Windows.Forms.Label lblIronTotal;
         private System.Windows.Forms.Label lblIron;
         private System.Windows.Forms.Label lblGoldTotal;

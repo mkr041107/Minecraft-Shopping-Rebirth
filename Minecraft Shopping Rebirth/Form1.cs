@@ -24,7 +24,12 @@ namespace Minecraft_Shopping_Rebirth
         bool down = false;
         int wood = 0;
         int stone = 0;
-        
+        int iron = 0;
+        int gold = 0;
+        int diamond = 0;
+        int emerald = 0;
+        int speed = 2;
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -35,6 +40,10 @@ namespace Minecraft_Shopping_Rebirth
 
             SharedVars.wood = wood;
             SharedVars.stone = stone;
+            SharedVars.iron = iron;
+            SharedVars.gold = gold;
+            SharedVars.diamond = diamond;
+            SharedVars.emerald = emerald;
             Form2 Upgrades = new Form2();
             this.Hide();
             Upgrades.ShowDialog();
@@ -71,19 +80,19 @@ namespace Minecraft_Shopping_Rebirth
         {
             if (up == true)
             {
-                Player.Top -= 2;
+                Player.Top -= speed;
             }
             if (down == true)
             {
-                Player.Top += 2;
+                Player.Top += speed;
             }
             if (left == true)
             {
-                Player.Left -= 2;
+                Player.Left -= speed;
             }
             if (right == true)
             {
-                Player.Left += 2;
+                Player.Left += speed;
             }
             if (Player.Bounds.IntersectsWith(pbWood.Bounds))
             {
@@ -103,15 +112,54 @@ namespace Minecraft_Shopping_Rebirth
                     Player.Location = new Point(12, 258);
                 }
             }
+           
+            
             if (SharedVars.stonePickaxeUnlock == true)
             {
-                lblStone.Visible = true;
-                lblTotalStone.Visible = true;
-                pbStone.Visible = true;
-                if (Player.Bounds.IntersectsWith(pbStone.Bounds))
+                lblIron.Visible = true;
+                lblIronTotal.Visible = true;
+                pbIronOre.Visible = true;
+                if (Player.Bounds.IntersectsWith(pbIronOre.Bounds))
                 {
-                    stone += 1;
-                    lblTotalStone.Text = "Total: " + stone;
+                    iron += 1;
+                    lblIronTotal.Text = "Total: " + iron;
+                    Player.Location = new Point(12, 258);
+                }
+            }
+
+            if (SharedVars.ironPickaxeUnlock == true)
+            {
+                lblGold.Visible = true;
+                lblGoldTotal.Visible = true;
+                pbGoldOre.Visible = true;
+                if (Player.Bounds.IntersectsWith(pbGoldOre.Bounds))
+                {
+                    gold += 1;
+                    lblGoldTotal.Text = "Total: " + gold;
+                    Player.Location = new Point(12, 258);
+                }
+            }
+            if (SharedVars.goldPickaxeUnlock == true)
+            {
+                lblDiamond.Visible = true;
+                lblDiamondTotal.Visible = true;
+                pbDiamondOre.Visible = true;
+                if (Player.Bounds.IntersectsWith(pbDiamondOre.Bounds))
+                {
+                    diamond += 1;
+                    lblDiamondTotal.Text = "Total: " + diamond;
+                    Player.Location = new Point(12, 258);
+                }
+            }
+            if (SharedVars.diamondPickaxeUnlock == true)
+            {
+                lblEmerald.Visible = true;
+                lblEmeraldTotal.Visible = true;
+                pbEmeraldOre.Visible = true;
+                if (Player.Bounds.IntersectsWith(pbEmeraldOre.Bounds))
+                {
+                    emerald += 1;
+                    lblEmeraldTotal.Text = "Total: " + emerald;
                     Player.Location = new Point(12, 258);
                 }
             }
@@ -135,6 +183,17 @@ namespace Minecraft_Shopping_Rebirth
             if (e.KeyCode == Keys.D)
             {
                 right = false;
+            }
+            if(e.KeyCode == Keys.NumPad8)
+            {
+
+                speed += 2;
+            }
+            if (e.KeyCode == Keys.NumPad5)
+
+            {
+                speed -= 2;
+
             }
         }
 

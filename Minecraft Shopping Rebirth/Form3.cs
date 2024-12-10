@@ -16,10 +16,23 @@ namespace Minecraft_Shopping_Rebirth
         {
             InitializeComponent();
         }
-
+        int wood = SharedVars.wood;
+        int stone = SharedVars.stone;
+        int iron = SharedVars.iron;
+        int gold = SharedVars.gold;
+        int diamond = SharedVars.diamond;
+        int emerald = SharedVars.emerald;
+        int 
+        static bool initialFormLoad = false;
         private void pbWoodChopper_Click(object sender, EventArgs e)
+        {
+            wood += 
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }

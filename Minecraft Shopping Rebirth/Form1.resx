@@ -461,15 +461,6 @@
         YII=
 </value>
   </data>
-  <data name="pbCopperOre.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAACpQTFRFoqKi
-        84JoT7qY4HNNj4+PWZWBf39/wWdGgYBYdHR0aGhoOnZjXFxcOmhawyHWzAAAAJZJREFUGNMNyq0OwjAY
-        BdArmmkcHscTYCeaJgsOAw/wcZMuoMCgh5xjadKmkoyfITAkS+ABSNG8Dxx9oLWY4OlA58nyQtjnLV0P
-        Ww8Wn9dRMgcf+8menpDzZlDE1MAxV+FdO4SY3Ho2b6G7utXfaoflaCF2CoPmoVatZBbMy1Oi8bC+q4Yh
-        /HOv+rvpxhCYXFELaK2QYn46mDoLWE5FYQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="pbGoldOre.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAAB5QTFRF//+1
