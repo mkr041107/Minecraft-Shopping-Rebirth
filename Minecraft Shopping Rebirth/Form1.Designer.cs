@@ -52,6 +52,7 @@
             this.lblOakTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tmrMove = new System.Windows.Forms.Timer(this.components);
+            this.tmrBuildings = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbWood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStone)).BeginInit();
@@ -156,6 +157,7 @@
             this.btnBuildings.TabIndex = 9;
             this.btnBuildings.Text = "Buildings";
             this.btnBuildings.UseVisualStyleBackColor = true;
+            this.btnBuildings.Click += new System.EventHandler(this.btnBuildings_Click);
             // 
             // lblStone
             // 
@@ -281,6 +283,10 @@
             this.tmrMove.Interval = 16;
             this.tmrMove.Tick += new System.EventHandler(this.tmrMove_Tick);
             // 
+            // tmrBuildings
+            // 
+            this.tmrBuildings.Tick += new System.EventHandler(this.tmrBuildings_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +355,7 @@
         private System.Windows.Forms.Label lblOakTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer tmrMove;
+        private System.Windows.Forms.Timer tmrBuildings;
     }
 }
 

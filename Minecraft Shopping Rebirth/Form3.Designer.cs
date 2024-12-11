@@ -64,6 +64,7 @@
             this.btnMainGame.TabIndex = 0;
             this.btnMainGame.Text = "Main Game";
             this.btnMainGame.UseVisualStyleBackColor = true;
+            this.btnMainGame.Click += new System.EventHandler(this.btnMainGame_Click);
             // 
             // pbIronMine
             // 

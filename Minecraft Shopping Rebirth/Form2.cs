@@ -16,12 +16,7 @@ namespace Minecraft_Shopping_Rebirth
         {
             InitializeComponent();
         }
-        int wood = SharedVars.wood;
-        int stone = SharedVars.stone;
-        int iron = SharedVars.iron;
-        int gold = SharedVars.gold;
-        int diamond = SharedVars.diamond;
-        int emerald = SharedVars.emerald;
+        
         static bool initialFormLoad = false;
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -68,9 +63,9 @@ namespace Minecraft_Shopping_Rebirth
 
         private void pbWoodenPickaxeUpgrade_Click(object sender, EventArgs e)
         {
-            if (wood >= 5)
+            if (SharedVars.wood >= 5)
             {
-                wood -= 5;
+                SharedVars.wood -= 5;
                 SharedVars.woodenPickaxeUnlock = true;
                 pbWoodenPickaxeUpgrade.Enabled = false;
                 pbWoodenPickaxeUpgrade.Visible = false;
@@ -90,8 +85,8 @@ namespace Minecraft_Shopping_Rebirth
 
         private void pbStonePickaxeUpgrade_Click(object sender, EventArgs e)
         {
-            if (stone >= 5) { 
-            stone -= 5;
+            if (SharedVars.stone >= 5) { 
+            SharedVars.stone -= 5;
             SharedVars.stonePickaxeUnlock = true;
             pbStonePickaxeUpgrade.Enabled = false;
             pbStonePickaxeUpgrade.Visible = false;
@@ -101,9 +96,9 @@ namespace Minecraft_Shopping_Rebirth
 
         private void pbIronPickaxeUpgrade_Click(object sender, EventArgs e)
         {
-            if (iron >= 5)
+            if (SharedVars.iron >= 5)
             {
-                iron -= 5;
+                SharedVars.iron -= 5;
                 SharedVars.ironPickaxeUnlock = true;
                 pbIronPickaxeUpgrade.Enabled = false;
                 pbIronPickaxeUpgrade.Visible = false;
@@ -114,9 +109,9 @@ namespace Minecraft_Shopping_Rebirth
 
         private void pbGoldPickaxeUpgrade_Click(object sender, EventArgs e)
         {
-            if (gold >= 5)
+            if (SharedVars.gold >= 5)
             {
-                gold -= 5;
+                SharedVars.gold -= 5;
                 SharedVars.goldPickaxeUnlock = true;
                 pbGoldPickaxeUpgrade.Enabled = false;
                 pbGoldPickaxeUpgrade.Visible = false;
@@ -127,9 +122,9 @@ namespace Minecraft_Shopping_Rebirth
 
         private void pbDiamondPickaxeUpgrade_Click(object sender, EventArgs e)
         {
-            if (diamond >= 5)
+            if (SharedVars.diamond >= 5)
             {
-                diamond -= 5;
+                SharedVars.diamond -= 5;
                 SharedVars.diamondPickaxeUnlock = true;
                 pbDiamondPickaxeUpgrade.Enabled = false;
                 pbDiamondPickaxeUpgrade.Visible = false;

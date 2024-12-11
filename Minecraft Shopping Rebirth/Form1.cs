@@ -22,13 +22,19 @@ namespace Minecraft_Shopping_Rebirth
         bool left = false;
         bool right = false;
         bool down = false;
-        int wood = 0;
-        int stone = 0;
-        int iron = 0;
-        int gold = 0;
-        int diamond = 0;
-        int emerald = 0;
+        double wood = 0;
+        double stone = 0;
+        double iron = 0;
+        double gold = 0;
+        double diamond = 0;
+        double emerald = 0;
         int speed = 2;
+        int woodChopper = SharedVars.woodChoppers;
+        int stoneMine = SharedVars.stoneMine;
+        int ironMine = SharedVars.ironMine;
+        int goldMine = SharedVars.goldMine;
+        int diamondMine = SharedVars.diamondMine;
+        int emeraldMine = SharedVars.emeraldMine;
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -54,6 +60,12 @@ namespace Minecraft_Shopping_Rebirth
         private void Form1_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
+             wood= SharedVars.wood ;
+             stone = SharedVars.stone;
+             iron= SharedVars.iron;
+            gold= SharedVars.gold;
+            diamond= SharedVars.diamond;
+            emerald = SharedVars.emerald;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -163,7 +175,7 @@ namespace Minecraft_Shopping_Rebirth
                     Player.Location = new Point(12, 258);
                 }
             }
-
+            
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -200,6 +212,27 @@ namespace Minecraft_Shopping_Rebirth
         private void pbWood_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tmrBuildings_Tick(object sender, EventArgs e)
+        {
+            wood += woodChopper;
+            lblOakTotal.Text = "Total: "+wood;
+        }
+
+        private void btnBuildings_Click(object sender, EventArgs e)
+        {
+            SharedVars.wood = wood;
+            SharedVars.stone = stone;
+            SharedVars.iron = iron;
+            SharedVars.gold = gold;
+            SharedVars.diamond = diamond;
+            SharedVars.emerald = emerald;
+            Form2 Upgrades = new Form2();
+            this.Hide();
+            Upgrades.ShowDialog();
+
+            this.Close();
         }
     }
 }
