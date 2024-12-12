@@ -216,7 +216,7 @@ namespace Minecraft_Shopping_Rebirth
 
         private void tmrBuildings_Tick(object sender, EventArgs e)
         {
-            wood += woodChopper;
+            wood += SharedVars.woodChoppers;
             lblOakTotal.Text = "Total: "+wood;
         }
 
@@ -228,9 +228,9 @@ namespace Minecraft_Shopping_Rebirth
             SharedVars.gold = gold;
             SharedVars.diamond = diamond;
             SharedVars.emerald = emerald;
-            Form2 Upgrades = new Form2();
+            Form3 Buildings = new Form3();
             this.Hide();
-            Upgrades.ShowDialog();
+            Buildings.ShowDialog();
 
             this.Close();
         }

@@ -285,6 +285,8 @@
             // 
             // tmrBuildings
             // 
+            this.tmrBuildings.Enabled = true;
+            this.tmrBuildings.Interval = 1000;
             this.tmrBuildings.Tick += new System.EventHandler(this.tmrBuildings_Tick);
             // 
             // Form1

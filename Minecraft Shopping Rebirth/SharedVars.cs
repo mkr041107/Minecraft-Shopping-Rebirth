@@ -25,5 +25,6 @@ namespace Minecraft_Shopping_Rebirth
         public static int goldMine { get; set; }
         public static int diamondMine { get; set; }
         public static int emeraldMine { get; set; }
+
     }
 }
