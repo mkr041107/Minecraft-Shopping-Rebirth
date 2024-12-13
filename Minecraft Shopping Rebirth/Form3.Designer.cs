@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.btnMainGame = new System.Windows.Forms.Button();
             this.pbIronMine = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@
             this.lblDiamondMine = new System.Windows.Forms.Label();
             this.lblEmeraldMineCost = new System.Windows.Forms.Label();
             this.lblEmeraldMine = new System.Windows.Forms.Label();
+            this.tmrTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbIronMine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGoldMine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiamondMine)).BeginInit();
@@ -75,6 +77,7 @@
             this.pbIronMine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbIronMine.TabIndex = 7;
             this.pbIronMine.TabStop = false;
+            this.pbIronMine.Click += new System.EventHandler(this.pbIronMine_Click);
             // 
             // pbGoldMine
             // 
@@ -85,6 +88,7 @@
             this.pbGoldMine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbGoldMine.TabIndex = 9;
             this.pbGoldMine.TabStop = false;
+            this.pbGoldMine.Click += new System.EventHandler(this.pbGoldMine_Click);
             // 
             // pbDiamondMine
             // 
@@ -95,6 +99,7 @@
             this.pbDiamondMine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDiamondMine.TabIndex = 10;
             this.pbDiamondMine.TabStop = false;
+            this.pbDiamondMine.Click += new System.EventHandler(this.pbDiamondMine_Click);
             // 
             // pbEmeraldMine
             // 
@@ -105,6 +110,7 @@
             this.pbEmeraldMine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbEmeraldMine.TabIndex = 11;
             this.pbEmeraldMine.TabStop = false;
+            this.pbEmeraldMine.Click += new System.EventHandler(this.pbEmeraldMine_Click);
             // 
             // pbWoodChopper
             // 
@@ -126,6 +132,7 @@
             this.pbStoneMine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbStoneMine.TabIndex = 13;
             this.pbStoneMine.TabStop = false;
+            this.pbStoneMine.Click += new System.EventHandler(this.pbStoneMine_Click);
             // 
             // lblWoodChopper
             // 
@@ -235,6 +242,12 @@
             this.lblEmeraldMine.TabIndex = 26;
             this.lblEmeraldMine.Text = "Emerald Mine";
             // 
+            // tmrTimer
+            // 
+            this.tmrTimer.Enabled = true;
+            this.tmrTimer.Interval = 1000;
+            this.tmrTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,5 +307,6 @@
         private System.Windows.Forms.Label lblDiamondMine;
         private System.Windows.Forms.Label lblEmeraldMineCost;
         private System.Windows.Forms.Label lblEmeraldMine;
+        private System.Windows.Forms.Timer tmrTimer;
     }
 }
