@@ -35,6 +35,14 @@ namespace Minecraft_Shopping_Rebirth
         int goldMine = SharedVars.goldMine;
         int diamondMine = SharedVars.diamondMine;
         int emeraldMine = SharedVars.emeraldMine;
+        static bool Tutorial1Completed = false;
+        static bool Tutorial2Completed = false;
+        static bool onlyTutorial1Completed = false;
+        static bool onlyTutorial2Completed = false;
+        static bool tutorial3Completed= false;
+        static bool onlyTutorial3Completed = false;
+        static bool TutorialBuildings = false;
+        static bool onlyTutorial4Completed = false;
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -43,7 +51,8 @@ namespace Minecraft_Shopping_Rebirth
 
         private void btnUpgrades_Click(object sender, EventArgs e)
         {
-
+            lblTutorialGetStone.Visible = false;
+            
             SharedVars.wood = wood;
             SharedVars.stone = stone;
             SharedVars.iron = iron;
@@ -52,6 +61,7 @@ namespace Minecraft_Shopping_Rebirth
             SharedVars.emerald = emerald;
             Form2 Upgrades = new Form2();
             this.Hide();
+            onlyTutorial3Completed = true;
             Upgrades.ShowDialog();
             
             this.Close();
@@ -59,13 +69,35 @@ namespace Minecraft_Shopping_Rebirth
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (Tutorial1Completed == true)
+            {
+                lblTutorialWASD.Visible = false;
+
+            }
+            if (Tutorial2Completed == true)
+            {
+
+        lblTutorialGather.Visible = false;
+            }
+            if (onlyTutorial3Completed == true&&onlyTutorial4Completed == false)
+            {
+                lblTutorialBuildings.Visible = true;
+            }
+            
+
+
             this.DoubleBuffered = true;
              wood= SharedVars.wood ;
              stone = SharedVars.stone;
              iron= SharedVars.iron;
             gold= SharedVars.gold;
             diamond= SharedVars.diamond;
-            emerald = SharedVars.emerald;
+            lblOakTotal.Text = "Total: " + wood;
+            lblTotalStone.Text = "Total: " + stone;
+            lblIronTotal.Text = "Total: " + iron;
+            lblGoldTotal.Text = "Total: " + gold;
+            lblDiamondTotal.Text = "Total: " + diamond;
+            lblEmeraldTotal.Text = "Total: " + emerald;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -73,6 +105,13 @@ namespace Minecraft_Shopping_Rebirth
             if (e.KeyCode == Keys.W)
             {
                 up = true;
+                lblTutorialWASD.Visible = false;
+                Tutorial1Completed = true;
+                if (Tutorial1Completed == true && onlyTutorial1Completed == false)
+                {
+                    lblTutorialGather.Visible = true;
+                    onlyTutorial1Completed = true;
+                }
             }
             if (e.KeyCode == Keys.S)
             {
@@ -85,7 +124,9 @@ namespace Minecraft_Shopping_Rebirth
             if (e.KeyCode == Keys.D)
             {
                 right = true;
+               
             }
+           
         }
 
         private void tmrMove_Tick(object sender, EventArgs e)
@@ -111,6 +152,14 @@ namespace Minecraft_Shopping_Rebirth
                 wood += 1;
                 lblOakTotal.Text = "Total: " + wood;
                 Player.Location = new Point(12, 258);
+                lblTutorialGather.Visible = false;
+             
+                Tutorial2Completed = true;
+                if(Tutorial2Completed==true && onlyTutorial2Completed == false)
+                {
+                    lblTutorialGetStone.Visible = true;
+                    onlyTutorial2Completed = true;
+                }
             }
             if (SharedVars.woodenPickaxeUnlock == true)
             {
@@ -218,6 +267,16 @@ namespace Minecraft_Shopping_Rebirth
         {
             wood += SharedVars.woodChoppers;
             lblOakTotal.Text = "Total: "+wood;
+            stone += SharedVars.stoneMine;
+            lblTotalStone.Text = "Total: " + stone;
+            iron += SharedVars.ironMine;
+            lblIronTotal.Text = "Total: " + iron;
+            gold += SharedVars.goldMine ;
+            lblGoldTotal.Text = "Total: " + gold;
+            diamond += SharedVars.diamondMine;
+            lblDiamondTotal.Text = "Total: " + diamond;
+            emerald += SharedVars.emeraldMine;
+            lblEmeraldTotal.Text = "Total: " + emerald;
         }
 
         private void btnBuildings_Click(object sender, EventArgs e)
@@ -230,6 +289,7 @@ namespace Minecraft_Shopping_Rebirth
             SharedVars.emerald = emerald;
             Form3 Buildings = new Form3();
             this.Hide();
+            onlyTutorial4Completed = true;
             Buildings.ShowDialog();
 
             this.Close();

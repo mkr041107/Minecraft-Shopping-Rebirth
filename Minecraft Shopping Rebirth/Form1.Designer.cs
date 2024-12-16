@@ -53,6 +53,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tmrMove = new System.Windows.Forms.Timer(this.components);
             this.tmrBuildings = new System.Windows.Forms.Timer(this.components);
+            this.lblTutorialWASD = new System.Windows.Forms.Label();
+            this.lblTutorialGather = new System.Windows.Forms.Label();
+            this.lblTutorialGetStone = new System.Windows.Forms.Label();
+            this.lblTutorialBuildings = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbWood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStone)).BeginInit();
@@ -289,11 +293,60 @@
             this.tmrBuildings.Interval = 1000;
             this.tmrBuildings.Tick += new System.EventHandler(this.tmrBuildings_Tick);
             // 
+            // lblTutorialWASD
+            // 
+            this.lblTutorialWASD.AutoSize = true;
+            this.lblTutorialWASD.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutorialWASD.Location = new System.Drawing.Point(413, 229);
+            this.lblTutorialWASD.Name = "lblTutorialWASD";
+            this.lblTutorialWASD.Size = new System.Drawing.Size(530, 42);
+            this.lblTutorialWASD.TabIndex = 24;
+            this.lblTutorialWASD.Text = "To Start Use WASD To Move";
+            // 
+            // lblTutorialGather
+            // 
+            this.lblTutorialGather.AutoSize = true;
+            this.lblTutorialGather.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutorialGather.Location = new System.Drawing.Point(143, 286);
+            this.lblTutorialGather.Name = "lblTutorialGather";
+            this.lblTutorialGather.Size = new System.Drawing.Size(985, 37);
+            this.lblTutorialGather.TabIndex = 25;
+            this.lblTutorialGather.Text = "To Get Resources Move Up And Collide With Oak Wood Picture";
+            this.lblTutorialGather.Visible = false;
+            // 
+            // lblTutorialGetStone
+            // 
+            this.lblTutorialGetStone.AutoSize = true;
+            this.lblTutorialGetStone.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutorialGetStone.Location = new System.Drawing.Point(563, 394);
+            this.lblTutorialGetStone.Name = "lblTutorialGetStone";
+            this.lblTutorialGetStone.Size = new System.Drawing.Size(453, 37);
+            this.lblTutorialGetStone.TabIndex = 26;
+            this.lblTutorialGetStone.Text = "Want Stone? Click Here ---->";
+            this.lblTutorialGetStone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTutorialGetStone.Visible = false;
+            // 
+            // lblTutorialBuildings
+            // 
+            this.lblTutorialBuildings.AutoSize = true;
+            this.lblTutorialBuildings.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutorialBuildings.Location = new System.Drawing.Point(441, 339);
+            this.lblTutorialBuildings.Name = "lblTutorialBuildings";
+            this.lblTutorialBuildings.Size = new System.Drawing.Size(670, 37);
+            this.lblTutorialBuildings.TabIndex = 27;
+            this.lblTutorialBuildings.Text = "Want To Stop Holding W? Click \"Buildings\"";
+            this.lblTutorialBuildings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTutorialBuildings.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1283, 483);
+            this.Controls.Add(this.lblTutorialBuildings);
+            this.Controls.Add(this.lblTutorialGetStone);
+            this.Controls.Add(this.lblTutorialGather);
+            this.Controls.Add(this.lblTutorialWASD);
             this.Controls.Add(this.lblOakTotal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblEmeraldTotal);
@@ -358,6 +411,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer tmrMove;
         private System.Windows.Forms.Timer tmrBuildings;
+        private System.Windows.Forms.Label lblTutorialWASD;
+        private System.Windows.Forms.Label lblTutorialGather;
+        private System.Windows.Forms.Label lblTutorialGetStone;
+        private System.Windows.Forms.Label lblTutorialBuildings;
     }
 }
 

@@ -18,8 +18,13 @@ namespace Minecraft_Shopping_Rebirth
         }
         
         static bool initialFormLoad = false;
+        static bool pickaxeTutoiralCompleted  = false;
         private void Form2_Load(object sender, EventArgs e)
         {
+            if (pickaxeTutoiralCompleted == true)
+            {
+
+            }
             if (initialFormLoad == false||SharedVars.woodenPickaxeUnlock == false)
             {
 
@@ -63,8 +68,10 @@ namespace Minecraft_Shopping_Rebirth
 
         private void pbWoodenPickaxeUpgrade_Click(object sender, EventArgs e)
         {
+           
             if (SharedVars.wood >= 5)
             {
+                lblTutorialStone.Visible = false;
                 SharedVars.wood -= 5;
                 SharedVars.woodenPickaxeUnlock = true;
                 pbWoodenPickaxeUpgrade.Enabled = false;

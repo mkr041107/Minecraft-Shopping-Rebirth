@@ -50,6 +50,7 @@
             this.lblEmeraldMineCost = new System.Windows.Forms.Label();
             this.lblEmeraldMine = new System.Windows.Forms.Label();
             this.tmrTimer = new System.Windows.Forms.Timer(this.components);
+            this.lblTutorialWood = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbIronMine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGoldMine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiamondMine)).BeginInit();
@@ -248,11 +249,22 @@
             this.tmrTimer.Interval = 1000;
             this.tmrTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblTutorialWood
+            // 
+            this.lblTutorialWood.AutoSize = true;
+            this.lblTutorialWood.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutorialWood.Location = new System.Drawing.Point(26, 145);
+            this.lblTutorialWood.Name = "lblTutorialWood";
+            this.lblTutorialWood.Size = new System.Drawing.Size(835, 39);
+            this.lblTutorialWood.TabIndex = 28;
+            this.lblTutorialWood.Text = "Click \"Wood Chopper\" To Automatically Get Wood";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 450);
+            this.Controls.Add(this.lblTutorialWood);
             this.Controls.Add(this.lblEmeraldMineCost);
             this.Controls.Add(this.lblEmeraldMine);
             this.Controls.Add(this.lblDiamondMineCost);
@@ -308,5 +320,6 @@
         private System.Windows.Forms.Label lblEmeraldMineCost;
         private System.Windows.Forms.Label lblEmeraldMine;
         private System.Windows.Forms.Timer tmrTimer;
+        private System.Windows.Forms.Label lblTutorialWood;
     }
 }

@@ -48,6 +48,7 @@
             this.lblDiamondPickaxeCost = new System.Windows.Forms.Label();
             this.lblDiamondPickaxeUpgrade = new System.Windows.Forms.Label();
             this.pbDiamondPickaxeUpgrade = new System.Windows.Forms.PictureBox();
+            this.lblTutorialStone = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbDeepSlateUpgrade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWoodenPickaxeUpgrade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStonePickaxeUpgrade)).BeginInit();
@@ -259,11 +260,22 @@
             this.pbDiamondPickaxeUpgrade.Visible = false;
             this.pbDiamondPickaxeUpgrade.Click += new System.EventHandler(this.pbDiamondPickaxeUpgrade_Click);
             // 
+            // lblTutorialStone
+            // 
+            this.lblTutorialStone.AutoSize = true;
+            this.lblTutorialStone.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutorialStone.Location = new System.Drawing.Point(21, 163);
+            this.lblTutorialStone.Name = "lblTutorialStone";
+            this.lblTutorialStone.Size = new System.Drawing.Size(778, 39);
+            this.lblTutorialStone.TabIndex = 24;
+            this.lblTutorialStone.Text = "Want Stone? Click \"Wooden Pickaxe Upgrade\"";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTutorialStone);
             this.Controls.Add(this.lblDiamondPickaxeCost);
             this.Controls.Add(this.lblDiamondPickaxeUpgrade);
             this.Controls.Add(this.pbDiamondPickaxeUpgrade);
@@ -318,5 +330,6 @@
         private System.Windows.Forms.Label lblDiamondPickaxeCost;
         private System.Windows.Forms.Label lblDiamondPickaxeUpgrade;
         private System.Windows.Forms.PictureBox pbDiamondPickaxeUpgrade;
+        private System.Windows.Forms.Label lblTutorialStone;
     }
 }

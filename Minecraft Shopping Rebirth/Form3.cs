@@ -26,7 +26,7 @@ namespace Minecraft_Shopping_Rebirth
         int emeraldMine = SharedVars.emeraldMine;
         static double woodChopperCalc = 10;
         static double woodChopperPrice = 10;
-        static double woodChopperCalcRound = 0;
+        static double woodChopperCalcRound = 10;
         static double woodRounded = 0;
         int cooldownWood = 0;
         int cooldownStone = 0;
@@ -36,24 +36,25 @@ namespace Minecraft_Shopping_Rebirth
         int cooldownEmerald = 0;
         static double stoneMineCalc = 10;
         static double stoneMinePrice = 10;
-        static double stoneMineCalcRound = 0;
+        static double stoneMineCalcRound = 10;
         static double stoneRounded = 0;
         static double ironMineCalc = 10;
         static double ironMinePrice = 10;
-        static double ironMineCalcRound = 0;
+        static double ironMineCalcRound = 10;
         static double ironRounded = 0;
         static double goldMineCalc = 10;
         static double goldMinePrice = 10;
-        static double goldMineCalcRound = 0;
+        static double goldMineCalcRound = 10;
         static double goldRounded = 0;
         static double diamondMineCalc = 10;
         static double diamondMinePrice = 10;
-        static double diamondMineCalcRound = 0;
+        static double diamondMineCalcRound = 10;
         static double diamondRounded = 0;
         static double emeraldMineCalc = 10;
         static double emeraldMinePrice = 10;
-        static double emeraldMineCalcRound = 0;
+        static double emeraldMineCalcRound = 10;
         static double emeraldRounded = 0;
+        static bool woodTutorialCompleted = false;
 
 
 
@@ -62,7 +63,8 @@ namespace Minecraft_Shopping_Rebirth
            
             if (woodChopperCalcRound <= SharedVars.wood && cooldownWood <= 0)
             {
-               
+               lblTutorialWood.Visible = false;
+                woodTutorialCompleted = true;
                 SharedVars.wood -= woodChopperCalcRound;
                
                 woodChopperCalc *= 1.1;
@@ -82,12 +84,27 @@ namespace Minecraft_Shopping_Rebirth
         {
             if (initialFormLoad == true)
             {
+                if (woodTutorialCompleted == true)
+                {
+                    lblTutorialWood.Visible=false;
+                }
                 lblWoodChopperCost.Text = "Cost: " + woodChopperPrice;
+                lblStoneMineCost.Text = "Cost: " + stoneMinePrice;
+                lblIronMineCost.Text = "Cost: " + ironMinePrice;
+                lblGoldMineCost.Text = "Cost: " + goldMinePrice;
+                lblDiamondMineCost.Text = "Cost: " + diamondMinePrice;
+                lblEmeraldMineCost.Text = "Cost: " + emeraldMinePrice;
                 initialFormLoad = false;
             }else
             {
 
                 lblWoodChopperCost.Text = "Cost: " + woodChopperCalcRound;
+                lblWoodChopperCost.Text = "Cost: " + woodChopperCalcRound;
+                lblStoneMineCost.Text = "Cost: " + stoneMineCalcRound;
+                lblIronMineCost.Text = "Cost: " + ironMineCalcRound;
+                lblGoldMineCost.Text = "Cost: " + goldMineCalcRound;
+                lblDiamondMineCost.Text = "Cost: " + diamondMineCalcRound;
+                lblEmeraldMineCost.Text = "Cost: " + emeraldMineCalcRound;
             }
         }
 
@@ -109,6 +126,11 @@ namespace Minecraft_Shopping_Rebirth
             cooldownDiamond -= 1;
             cooldownEmerald -= 1;
             lblWoodChopperCost.Text = "Cost: " + woodChopperCalcRound;
+            lblStoneMineCost.Text = "Cost: " + stoneMineCalcRound;
+            lblIronMineCost.Text = "Cost: " + ironMineCalcRound;
+            lblGoldMineCost.Text = "Cost: " + goldMineCalcRound;
+            lblDiamondMineCost.Text = "Cost: " + diamondMineCalcRound;
+            lblEmeraldMineCost.Text = "Cost: " + emeraldMineCalcRound;
         }
 
         private void pbStoneMine_Click(object sender, EventArgs e)
